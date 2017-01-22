@@ -1,0 +1,39 @@
+Description: Disable tests that try to access the network
+Origin: vendor
+Bug-Debian: http://bugs.debian.org/830273
+Forwarded: not-needed
+Author: Alessandro Ghedini <ghedo@debian.org>
+Reviewed-by: Alessandro Ghedini <ghedo@debian.org>
+Last-Update: 2016-08-03
+
+--- a/tests/Makefile.am
++++ b/tests/Makefile.am
+@@ -59,7 +59,7 @@
+ if CROSSCOMPILING
+ TEST = @echo "NOTICE: we can't run the tests when cross-compiling!"
+ else # if not cross-compiling:
+-TEST = srcdir=$(srcdir) $(PERL) $(PERLFLAGS) $(srcdir)/runtests.pl -n
++TEST = srcdir=$(srcdir) $(PERL) $(PERLFLAGS) $(srcdir)/runtests.pl -n '!non-existing host'
+ TEST_Q = -a -s
+ TEST_AM = -a -am
+ TEST_F = -a -p -r
+--- a/tests/data/test1101
++++ b/tests/data/test1101
+@@ -5,6 +5,7 @@
+ HTTP GET
+ HTTP Basic auth
+ NO_PROXY
++non-existing host
+ </keywords>
+ </info>
+ # Server-side
+--- a/tests/data/test1212
++++ b/tests/data/test1212
+@@ -5,6 +5,7 @@
+ SOCKS5
+ NO_PROXY
+ noproxy
++non-existing host
+ </keywords>
+ </info>
+ 

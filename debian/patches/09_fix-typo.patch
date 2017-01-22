@@ -1,0 +1,29 @@
+Description: Fix typos in man pages
+Origin: vendor
+Forwarded: no
+Author: Alessandro Ghedini <ghedo@debian.org>
+Reviewed-by: Alessandro Ghedini <ghedo@debian.org>
+Last-Update: 2016-08-03
+
+--- a/docs/libcurl/libcurl-tutorial.3
++++ b/docs/libcurl/libcurl-tutorial.3
+@@ -1147,7 +1147,7 @@
+ .IP "IPv6 Addresses"
+ libcurl will normally handle IPv6 addresses transparently and just as easily
+ as IPv4 addresses. That means that a sanitizing function that filters out
+-addressses like 127.0.0.1 isn't sufficient--the equivalent IPv6 addresses ::1,
++addresses like 127.0.0.1 isn't sufficient--the equivalent IPv6 addresses ::1,
+ ::, 0:00::0:1, ::127.0.0.1 and ::ffff:7f00:1 supplied somehow by an attacker
+ would all bypass a naive filter and could allow access to undesired local
+ resources.  IPv6 also has special address blocks like link-local and site-local
+--- a/docs/libcurl/opts/CURLOPT_SSL_CTX_FUNCTION.3
++++ b/docs/libcurl/opts/CURLOPT_SSL_CTX_FUNCTION.3
+@@ -117,7 +117,7 @@
+   rv=curl_easy_setopt(ch, CURLOPT_URL, "https://www.example.com/");
+ 
+   /* Retrieve page using cacerts' certificate -> will succeed
+-   * load the certificate by installing a function doing the nescessary
++   * load the certificate by installing a function doing the necessary
+    * "modifications" to the SSL CONTEXT just before link init
+    */
+   rv=curl_easy_setopt(ch, CURLOPT_SSL_CTX_FUNCTION, *sslctx_function);
