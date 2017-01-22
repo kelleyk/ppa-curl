@@ -20,6 +20,8 @@ CONFIGURE_ARGS = -- --disable-dependency-tracking		\
 
 override_dh_auto_configure:
 	mkdir -p debian/build debian/build-gnutls debian/build-nss
+	dh_autoreconf --as-needed
+	cp ltmain.sh ltmain.sh.patched
 	# pop the last patch (nss)
 	quilt pop
 	# pop the second last patch (gnutls)
@@ -39,7 +41,7 @@ override_dh_auto_configure:
 		| tar -xf - -C debian/build-nss
 	# run buildconf and make sure to copy the patched ltmain.sh
 	for flavour in build build-gnutls build-nss; do \
-		(cd debian/$$flavour && ./buildconf && cp ../../ltmain.sh .) \
+		(cd debian/$$flavour && ./buildconf && cp ../../ltmain.sh.patched ltmain.sh) \
 	done
 	cd debian/build && dh_auto_configure ${CONFIGURE_ARGS}		\
 		--with-ca-path=/etc/ssl/certs				\
@@ -91,4 +93,5 @@ override_dh_strip:
 
 override_dh_auto_clean:
 	$(RM) -r debian/build* debian/tmp*
+	dh_autoreconf_clean
 	dh_auto_clean

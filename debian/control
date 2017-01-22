@@ -22,7 +22,8 @@ Build-Depends: debhelper (>= 9.20141010~),
  python:native,
  quilt,
  stunnel4 <!nocheck>,
- zlib1g-dev
+ zlib1g-dev,
+ dh-autoreconf
 Build-Conflicts: autoconf2.13, automake1.4
 Standards-Version: 3.9.8
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/curl.git
