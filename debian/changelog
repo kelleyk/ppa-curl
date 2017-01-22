@@ -1,3 +1,11 @@
+curl (7.50.1~1.gitf2cb3a0-kk1) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @f2cb3a01192d36395d16acec6cdb93446ca6fd45 **
+
+  * Switch to git-based packaging.  This is the 'curl_7-50-1' tagged release.
+
+ -- Kevin Kelley <kelleyk@kelleyk.net>  Sun, 22 Jan 2017 15:21:08 -0700
+
 curl (7.50.1-1ubuntu1.1) yakkety-security; urgency=medium
 
   * SECURITY UPDATE: Incorrect reuse of client certificates with NSS
@@ -581,7 +589,7 @@ curl (7.32.0-1) unstable; urgency=low
 
 curl (7.31.0-2ubuntu1) saucy; urgency=low
 
-  * Merge from Debian, Remaining changes: 
+  * Merge from Debian, Remaining changes:
     - Drop dependencies not in main:
       + Build-Depends: Drop stunnel4 and libssh2-1-dev.
       + Drop libssh2-1-dev from binary package Depends.
@@ -1025,7 +1033,7 @@ curl (7.21.7-3ubuntu1) precise; urgency=low
     - Drop dependencies not in main:
       + Build-Depends: Drop stunnel and libssh2-1-dev.
       + Drop libssh2-1-dev from libcurl4-openssl-dev's Depends.
-    - Add new libcurl3-udeb package, stripped down for use during 
+    - Add new libcurl3-udeb package, stripped down for use during
       installation (LP: #831496).
   * Dropped changes:
     - debian/patches/timeout_bug_736216: applied upstream.
