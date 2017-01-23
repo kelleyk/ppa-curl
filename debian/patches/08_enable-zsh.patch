@@ -7,7 +7,7 @@ Last-Update: 2016-08-03
 
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -149,8 +149,8 @@
+@@ -152,8 +152,8 @@ CLEANFILES = $(VC6_LIBDSP) $(VC6_SRCDSP)
  
  bin_SCRIPTS = curl-config
  
