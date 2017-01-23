@@ -1,11 +1,11 @@
 README
-docs/BINDINGS
+docs/BINDINGS.md
 docs/BUGS
-docs/CONTRIBUTE
+docs/CONTRIBUTE.md
 docs/FAQ
 docs/FEATURES
-docs/HISTORY
-docs/INTERNALS
+docs/HISTORY.md
+docs/INTERNALS.md
 docs/KNOWN_BUGS
 docs/RESOURCES
 docs/THANKS
