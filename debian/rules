@@ -58,6 +58,10 @@ override_dh_auto_build:
 	cd debian/build && dh_auto_build
 	cd debian/build-gnutls && dh_auto_build
 	cd debian/build-nss && dh_auto_build
+	cd debian/build/docs && make html
+	cd debian/build/docs && make pdf
+	cp -a debian/build/docs/*.html debian/build/docs/*.pdf docs/
+	cp -a debian/build/docs/libcurl/*.html debian/build/docs/libcurl/*.pdf docs/libcurl/
 
 override_dh_auto_test:
 	-cd debian/build && dh_auto_test
