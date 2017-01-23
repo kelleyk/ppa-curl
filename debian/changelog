@@ -1,3 +1,11 @@
+curl (7.52.1~1.git44b9b4d-kk1) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @44b9b4d4f56d6f6de92c89636994c03984e9cd01 **
+
+  * Switch to git-based packaging.  This is the 'curl_7-52-1' tagged release.
+
+ -- Kevin Kelley <kelleyk@kelleyk.net>  Sun, 22 Jan 2017 17:29:15 -0700
+
 curl (7.50.1~1.gitf2cb3a0-kk1) UNRELEASED; urgency=medium
 
   ** SNAPSHOT build @f2cb3a01192d36395d16acec6cdb93446ca6fd45 **
